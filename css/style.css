@@ -1,0 +1,82 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "one one one one"
+                "two three three four"
+                "five five five four"
+                "six six six six";
+            grid-template-rows: 1fr 2fr 0.5fr 1fr;
+            grid-gap: 0;
+            width: 600px;
+            height: 600px;
+            background-color: white;
+        }
+        .container div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 24px;
+        }
+        .one { grid-area: one; background-color: lightblue; position: relative; }
+        .two { grid-area: two; background-color: lightcoral; }
+        .three { grid-area: three; background-color: white; flex-direction: column; }
+        .four { grid-area: four; background-color: lightcoral; flex-direction: column; }
+        .five { grid-area: five; background-color: lightgreen; }
+        .six { grid-area: six; background-color: lightblue; flex-direction: column; position: relative; }
+        input[type="text"] {
+            width: 60px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin: 0;
+        }
+        .one input {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+        .six input {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            font-size: 18px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
